@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>LikeBook</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="like2.webp">
+
+       
+        <script>
+            function valid(){
+                var pass = document.getElementById("pw").value;
+                var reg = /^[A-Z @#$%]{8}$/;
+                if (!pass.match(reg)){
+                    alert("should be one uppercase, one spl character and length should be 8");
+                    return false
+                }
+                else{
+                    alert("login success");
+                    return true;
+                }
+            }
+
+            function signup(){
+                var pass = document.getElementById("xx").value;
+                var reg = /^[A-Z @#$%]{8}$/;
+                if (!pass.match(reg)){
+                    alert("all fields are mandatory and password should be one uppercase, one spl character and length should be 8");
+                    return false
+                }
+                else{
+                    alert("account created successfully");
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="header">
+            
+                 <div class="heading">
+                      <span style="color:yellow"><b>LIKE</b></span>
+                     <span style="color:orange"><b>book</b></span>
+                 </div>
+
+                 <div class="login">
+                    <form action="loginsuccess.html" onsubmit="return valid()">
+                     <table>
+                         <tr>
+                             <td>Email</td>
+                             <td>Password</td>
+                         </tr>
+                         <tr>
+                            <td><input type="email"></td>
+                            <td><input type="password" required id="pw"></td>
+                            <td><button><b>Log In</b></button></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><p><a href="forgotpw.html">Forgot Password?</a></p></td>
+                        </tr>
+                        
+                     </table>
+                    </form>
+
+                 </div>
+            
+        </div>
+
+    <div class="pagebody">
+        <div class="left">
+            <h2>LIKEbook connects you with the people you like.</h2>
+            <img src="login1.webp">
+            
+        </div>
+        <div class="right">
+        <form action="signupsuccess.html" onsubmit="return signup()">
+            <h4>Create an account</h4>
+            <p>For free...!</p>
+
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="First Name"></td>
+                    <td><input type="text" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td><input type="email" placeholder="email"></td>
+                    <td><input type="number" placeholder="phone"></td>
+                </tr>
+
+                <tr>
+                    <td><h6><br>Set new password :</h6></td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2" ><input type="password" placeholder="Enter new password" class="pw"  required id="xx"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" ><input type="password" placeholder="Confirm password" class="pw"></td>
+                </tr>
+
+                <tr>
+                    <td><h6><br>Enter Date of Birth :</h6></td>
+                </tr>
+                <tr>
+                    <td><input type="date" ></td>
+                </tr>
+                <tr>
+                    <td><h6><br>Select Gender:</h6></td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="radio" name="gender" class="g"><label class="l"> Male</label>
+                            <input type="radio" name="gender" class="g"><label class="l"> Female</label>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h5>Click OK to create an account</h5></td>
+                    <td><button>OK</button></td>
+                </tr>
+                <tr>
+                    <td><p>By clicking OK,you agree the<br> Terms and conditions</p></td>
+                </tr>
+            </table>
+        </form>
+            
+        </div>
+        <div class="bottom">
+
+        </div>
+        
+    </div>
+
+
+
+    </body>
+
+
+    </html>
